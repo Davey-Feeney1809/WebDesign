@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Madness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+<body id="nerd">
+ <div>                         <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container-fluid d-flex">
+        <div class = "justify-content-start">
+            <a class="navbar-brand" href="index.html">Music Madness</a>
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll navbar-light">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vinyl">Vinyl</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cds">CD's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#movies">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About Us</a>
+                    </li>
+        </div>
+        <div class = "d-flex justify-content-end">
+
+            <ul class = "navbar-nav mb-lg-0" id = "loginNavbar">
+                <li class = "nav-item d-flex">
+                    <a class = "nav-link active" aria-current = "page"  href = "loginPage.html" id = "login2">Login</a>
+                    <a class = "nav-link active "  aria-current = "page"  href = "accountDetails.html" id = "accountDetails">Account Details</a>
+                    <a class = "nav-link active " aria-current = "page"  href = "index.html" onlick = "localstorage.setItem('checkedlogged' , 'logout')" id = "logout">Log Out</a>
+                </li>
+            </ul>
+
+                <div>
+                    <form class = "container-fluid justify-content-start">
+                        <a class = "btn btn-outline-secondary" href = "shoppingCart.html" role = "button" id = "cartButton">Cart<span class="badge" id = "cartCounter"></span></a>
+                    </form>
+                </div>
+
+            </ul>
+        </div>
+    </div>
+
+    </nav>
+ </div>
+
+ <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/nowayhome.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<div class = "text-center m-4" >
+<h1 id = "preorders">Pre-Orders</h1>
+    <div class="container" >
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/no%20time%20to%20die.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">James Bond: <br>No Time To Die<br>€13</h5>
+                        <a class="btn btn-primary" onclick="addToCart('James Bond: No Time To Die' , '13')">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/Tick_Tick_Boom_Movie_poster.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tick, Tick, <br>BOOM!<br>€15</h5>
+                        <a class="btn btn-primary" onclick="addToCart('Tick, Tick, BOOM!' , '15')" >Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/Venom_Let_There_Be_Carnage_poster.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Venom:<br>Let There Be Carnage<br>€15</h5>
+                        <a class="btn btn-primary" onclick="addToCart('Venom Let There Be Carnage' , '15')" >Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Spider-Man <br> No Way Home</h5>
+                        <a class="btn btn-primary" onclick="addToCart('Spider-Man No Way Home' , '15')" >Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class = "text-center">
+<h1 id = "vinyl">Vinyl</h1>
+    <div class="container" >
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/flower%20boy.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tyler The Creator <br>Flower Boy</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/foresthilldrive.png" class="card-img-top img-thumbnail" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">J Cole<br>2014 Forest Hill Drive</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/tickets%20to%20my%20downfall.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Machine Gun Kelly <br>Tickets To My Downfall</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/abbeyroad2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Beatles <br>Abbey Road</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class = "text-center">
+<h1 id = "cds">CD's</h1>
+    <div class="container" >
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/nowthatswhaticallmusic110.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Now Thats What I Call Music <br>110</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/toletagoodthingdie.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bruno Major<br>To Let A Good Thing Die</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/softcell.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Softcell<br>Nonstop Erotic Cabanet</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/Ed_Sheeran_-_Equals.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ed Sheeran<br>Equals</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class = "text-center">
+<h1 id = "movies">Movies</h1>
+    <div class="container" >
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Spider-Man<br>No Way Home</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/dune.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dune</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/widow.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Black Widow</h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/rednotice.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Red Notice<br></h5>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+</div>
+
+
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src = "assets/js/main.js"></script>
+ <script>
+     window.onload = function (){
+         if (localStorage.getItem('checkedlogged') === 'login')
+         {
+             document.getElementById('login2').style.display = 'none';
+             document.getElementById('accountDetails').style.display = 'block';
+             document.getElementById('logout').style.display = 'block';
+         }
+         document.getElementById('cartCounter').innerHTML = localStorage.getItem('cartTotalItems');
+     }
+
+ </script>
+</body>
+<footer class = "footer">&copy; Copyright 2021 Music Madness</footer>
+
+</html>
